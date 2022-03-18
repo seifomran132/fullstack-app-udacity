@@ -9,7 +9,7 @@ orbs:
 
 jobs:
   frontend:
-    working_directory: ~/
+    
     docker:
       - image: "cimg/base:stable"
     steps:
