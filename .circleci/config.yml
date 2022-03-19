@@ -29,9 +29,30 @@ jobs:
           name: deploy to aws
           command: npm run front:deploy
 
+  backend:
+    working_directory: ~/udagram-api
+    docker:
+      - image: "cimg/base:stable"
+    steps:
+      - node/install
+      - checkout
+      - run:
+          name: install dependancies
+          command: npm run backend:install
+
+      - run:
+          name: run build
+          command: npm run backend:build
+      
+      - aws-cli/install
+
+      - run:
+          name: deploy to aws
+          command: npm run backend:cp && npm run backend:create
 
 workflows:
   building_deploying: 
     jobs:
       - frontend
+      - backend
       
