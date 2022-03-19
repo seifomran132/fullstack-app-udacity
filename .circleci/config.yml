@@ -48,8 +48,8 @@ jobs:
 
       - run:
           name: deploy to aws
-          command: npm run backend:cp && npm run backend:create && npm run backend:update
-          
+          command: npm run backend:cp && npm run backend:create
+
 
 workflows:
   building_deploying: 
