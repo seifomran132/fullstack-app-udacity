@@ -63,3 +63,7 @@ The e2e tests are using Protractor and Jasmine.
 ## License
 
 [License](LICENSE.txt)
+
+## Build Badge
+
+[![CricleCI](https://circleci.com/gh/circleci/fullstack-app-udacity.svg?style=svg)](https://circleci.com/gh/circleci/fullstack-app-udacity)

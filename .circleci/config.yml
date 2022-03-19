@@ -49,6 +49,9 @@ jobs:
       - run:
           name: deploy to aws
           command: npm run backend:cp && npm run backend:create
+      - run:
+          name: config the environment variables
+          command: chmod +x ./bin/envdeploy.sh && ./bin/envdeploy.sh
 
 
 workflows:
