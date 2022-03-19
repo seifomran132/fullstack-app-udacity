@@ -48,7 +48,7 @@ jobs:
       - aws-elastic-beanstalk/setup
       - run:
           name: deploy to aws
-          command: npm run backend:cp && cd udagram-api && chmod +x ./bin/deploy.sh && ./bin/deploy.sh && cd ..
+          command: npm run backend:cp  && chmod +x ./bin/deploy.sh && ./bin/deploy.sh
       
       
 workflows:
