@@ -51,7 +51,7 @@ jobs:
           command: npm run backend:cp && npm run backend:create
       - run:
           name: config the environment variables
-          command: chmod +x ./udagram-api/bin/envdeploy.sh && ./udagram-api/bin/envdeploy.sh
+          command: pip install --upgrade awsebcli chmod +x ./udagram-api/bin/envdeploy.sh && ./udagram-api/bin/envdeploy.sh
 
 
 workflows:
