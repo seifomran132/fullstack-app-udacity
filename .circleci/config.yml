@@ -45,7 +45,7 @@ jobs:
           command: npm run backend:build
       
       - aws-cli/install
-      - eb/setup
+      - aws-elastic-beanstalk/setup
       - run:
           name: deploy to aws
           command: npm run backend:cp && cd udagram-api && chmod +x ./udagram-api/bin/deploy.sh && ./udagram-api/bin/deploy.sh && cd ..
