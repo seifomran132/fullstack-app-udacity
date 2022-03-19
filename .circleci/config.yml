@@ -21,10 +21,7 @@ jobs:
       - run:
           name: run build
           command: npm run front:build
-      - run:
-          name: run tests
-          command: npm run front:test
-          
+      
       - aws-cli/install
 
       - run:
