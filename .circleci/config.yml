@@ -27,7 +27,7 @@ jobs:
 
       - run:
           name: deploy to aws
-          command: aws s3 cp --recursive --acl public-read ./www s3://seifsudagram/
+          command: npm run front:deploy
 
 
 workflows:
