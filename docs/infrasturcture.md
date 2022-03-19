@@ -1,6 +1,6 @@
 # Application infrastructure
 
-[AWS Infrastructure](infrastructure.png)
+![AWS Infrastructure](infrastructure.png)
 
 ## AWS
 
