@@ -9,6 +9,7 @@ orbs:
 
 jobs:
   frontend:
+    working_directory: ~/udagram-frontend
     docker:
       - image: "cimg/base:stable"
     steps:
