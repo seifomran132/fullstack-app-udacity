@@ -57,7 +57,7 @@ workflows:
       - frontend:
           filters:
             branches:
-              only: master
+              only: main
       - backend:
           filters:
             branches:
