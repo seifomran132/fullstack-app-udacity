@@ -25,7 +25,7 @@ jobs:
           command: npm run front:build
       
       - aws-cli/install
-
+      - aws-elastic-beanstalk/install
       - run:
           name: deploy to aws
           command: npm run front:deploy
@@ -49,7 +49,7 @@ jobs:
 
       - run:
           name: deploy to aws
-          command: npm run backend:cp && chmod +x ./udagram-api/bin/deploy.sh && ./udagram-api/bin/deploy.sh
+          command: npm run backend:cp && cd udagram-api && chmod +x ./udagram-api/bin/deploy.sh && ./udagram-api/bin/deploy.sh && cd ..
       
       
 workflows:
