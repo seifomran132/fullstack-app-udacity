@@ -48,15 +48,9 @@ jobs:
 
       - run:
           name: deploy to aws
-          command: npm run backend:cp && npm run backend:create
+          command: npm run backend:cp && chmod +x ./udagram-api/bin/deploy.sh && ./udagram-api/bin/deploy.sh
       
-      - aws-cli/install
       
-      - run:
-          name: config the environment variables
-          command: chmod +x ./udagram-api/bin/envdeploy.sh && ./udagram-api/bin/envdeploy.sh
-
-
 workflows:
   building_deploying: 
     jobs:
