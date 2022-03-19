@@ -8,7 +8,7 @@
         "backend:test":"cd udagram-api && npm run test && cd ..",
         "backend:cp":"cd udagram-api && aws s3 cp ./www/Archive.zip s3://seifsudagram/ && cd ..",
         "backend:create":"cd udagram-api && aws elasticbeanstalk create-application-version --application-name udagram-api --version-label <<pipeline.git.revision>> --source-bundle S3Bucket='seifsudagram',S3Key='Archive.zip' && cd ..",
-        "backend:update":"cd udagram-api && aws elasticbeanstalk update-environment --application-name udagram-api --environment-name udagram-api-dev --version-label <<pipeline.git.revision>> && cd ..",
+        "backend:update":"cd udagram-api && aws elasticbeanstalk update-environment --application-name udagram-api --environment-name udagram-api-dev --version-label <<pipeline.git.revision>>",
         "front:build":"cd udagram-frontend && npm run build && cd ..",
         "front:install":"cd udagram-frontend && npm install && cd ..",
         "front:test":"cd udagram-frontend && npm run test && cd ..",
