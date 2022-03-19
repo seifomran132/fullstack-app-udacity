@@ -49,12 +49,12 @@ jobs:
       - run:
           name: deploy to aws
           command: npm run backend:cp && npm run backend:create
-      - run:
-          name: Install PIP
-          command: sudo easy_install pip
+      
+      - aws-cli/install
+      
       - run:
           name: config the environment variables
-          command: pip install --upgrade awsebcli chmod +x ./udagram-api/bin/envdeploy.sh && ./udagram-api/bin/envdeploy.sh
+          command: chmod +x ./udagram-api/bin/envdeploy.sh && ./udagram-api/bin/envdeploy.sh
 
 
 workflows:
