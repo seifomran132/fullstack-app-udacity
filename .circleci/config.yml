@@ -25,7 +25,6 @@ jobs:
           command: npm run front:build
       
       - aws-cli/install
-      - aws-elastic-beanstalk/install
       - run:
           name: deploy to aws
           command: npm run front:deploy
